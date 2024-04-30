@@ -57,7 +57,7 @@ class modelhandler:
         self.x_train=self.x_train.replace(self.train_encode)
         self.x_test=self.x_test.replace(self.test_encode)
 
-    def createmodel(self, criterion='gini', maxdepth=10):
+    def createmodel(self, criterion='entropy', maxdepth=10):
         self.model = RandomForestClassifier(criterion= criterion, max_depth= maxdepth)
 
     def trainmodel(self):
